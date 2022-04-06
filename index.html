@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>todo app</title>
+  </head>
+  <body>
+    <h1>todo app</h1>
+    <div id="app">
+      <input type="text" v-model="newTodo" />
+      <button v-on:click="addTodo">add</button>
+      <ul>
+        <li v-for="todo of todos">
+          <input type="checkbox" @change="changeHandler(todo.id. $event)" />
+          {{ todos }}
+        </li>
+      </ul>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
